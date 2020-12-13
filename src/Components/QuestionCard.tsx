@@ -14,7 +14,9 @@ import {questionPropsType} from './../Types/quiz_types'
              <div className='question'>
                  {question}
              </div>
-             <form onSubmit={(e:React.FormEvent<EventTarget>) => callback(e, selectedAns)}>
+             <form onSubmit={(e:React.FormEvent<EventTarget>) => callback(e, selectedAns)}
+                className='question-form'
+             >
                  {
                      options.map((opt:string, ind: number) => {
                          return(
@@ -34,7 +36,7 @@ import {questionPropsType} from './../Types/quiz_types'
                          )
                      })
                  }
-                 <input type='submit' />
+                 <input type='submit' className='submit' />
              </form>
          </div>
      )
